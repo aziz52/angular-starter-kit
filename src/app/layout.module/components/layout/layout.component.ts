@@ -13,7 +13,5 @@ export class LayoutComponent implements OnInit {
     console.log("new line added");
     console.log("new 2 line added");
     console.log("new 3 line added");
-
-
   }
 }
