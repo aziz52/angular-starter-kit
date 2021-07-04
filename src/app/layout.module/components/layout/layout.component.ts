@@ -20,6 +20,10 @@ export class LayoutComponent implements OnInit {
     console.log("new 8 line added");
     console.log("new 9 line added");
     console.log("new 10 line added");
+    console.log("new 11 line added");
+    console.log("new 12 line added");
+
+
 
 
 
