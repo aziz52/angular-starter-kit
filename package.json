@@ -15,12 +15,6 @@
     "prepare": "husky install"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit called\"",
-      "pre-push": "ng build --aot true"
-    }
-  },
   "dependencies": {
     "@angular/animations": "~12.0.0",
     "@angular/common": "~12.0.0",
