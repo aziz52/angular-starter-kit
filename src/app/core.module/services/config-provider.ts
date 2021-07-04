@@ -5,10 +5,10 @@ export class ConfigProvider {
 
     private config: any = null;
 
-    constructor() {
-    }
+    // constructor() {
+    // }
 
-    public getConfig(key: any): any {
+    public getConfig(key: string): unknown {
         return this.config[key];
     }
 
