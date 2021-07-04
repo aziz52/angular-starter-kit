@@ -9,7 +9,9 @@ export class LayoutComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log("layout")
-    console.log("new line added")
+    console.log('layout');
+    console.log("new line added");
+    console.log("new 2 line added");
+
   }
 }
