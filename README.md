@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 This is a starter project for Angualr. I have added some basic module and code structure that supports eager and lazy loading. I have added esLint to the project for code formatting.
+I have also used pre-commit git hook to lint the code before getting commited using husky.
 
 ## Development server
 
