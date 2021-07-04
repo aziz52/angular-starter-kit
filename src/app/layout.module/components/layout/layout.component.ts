@@ -9,6 +9,6 @@ export class LayoutComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('layout');
+    console.log("layout");
   }
 }

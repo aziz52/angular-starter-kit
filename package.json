@@ -14,6 +14,12 @@
     "lint": "ng lint"
   },
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint && ng lint --fix",
+      "pre-push": "ng build --aot true"
+    }
+  },
   "dependencies": {
     "@angular/animations": "~12.0.0",
     "@angular/common": "~12.0.0",
@@ -41,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "4.23.0",
     "@typescript-eslint/parser": "4.23.0",
     "eslint": "^7.26.0",
+    "husky": "^7.0.0",
     "jasmine-core": "~3.7.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
