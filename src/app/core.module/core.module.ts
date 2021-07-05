@@ -1,8 +1,8 @@
-import { NgModule, ModuleWithProviders, Optional, SkipSelf, APP_INITIALIZER } from '@angular/core';
+import { NgModule, ModuleWithProviders, Optional, SkipSelf, APP_INITIALIZER, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { ConfigProvider, LoaderService, AppInterceptor } from './services';
+import { ConfigProvider, LoaderService, AppInterceptor, GlobalErrorHandler } from './services';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ export class CoreModule {
       ngModule: CoreModule,
       providers: [AppInterceptor, ConfigProvider, LoaderService,
         { provide: APP_INITIALIZER, useFactory: appConfigServiceFactory, deps: [ConfigProvider], multi: true },
+        { provide: ErrorHandler, useClass: GlobalErrorHandler },
         { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true }
       ]
     };

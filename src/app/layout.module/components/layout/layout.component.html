@@ -1,4 +1,11 @@
 <app-header></app-header>
-<p>layout works!</p>
+
+<h1>layout works!</h1>
+
+<div class="row">
+	<button (click)="localError()">Local front end error</button>
+	<button (click)="failingRequest()">Server request with error</button>
+</div>
+
 <router-outlet></router-outlet>
 <app-footer></app-footer>

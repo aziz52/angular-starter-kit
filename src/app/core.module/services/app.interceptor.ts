@@ -21,9 +21,9 @@ export class AppInterceptor implements HttpInterceptor {
     });
     return next.handle(customReq).pipe(
       catchError((error: HttpErrorResponse) =>
-        throwError(error)
+       throwError(error)
       ),
       finalize(() => this.loaderService.showLoader(false))
-    );
+    ) as  Observable<HttpEvent<any>>;
   }
 }

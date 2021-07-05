@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  constructor(private http: HttpClient) {}
+
   ngOnInit(): void {
     console.log('layout');
+  }
+
+  public localError(): void {
+    throw Error('The Layout component has thrown an error!');
+  }
+
+  public failingRequest() :void{
+    this.http.get('https://httpstat.us/404?sleep=2000').subscribe(resp=>{
+      console.log(resp);
+    });
   }
 }
