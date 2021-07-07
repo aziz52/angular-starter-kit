@@ -13,6 +13,7 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('layout');
+    console.log("Aziz")
   }
 
   public localError(): void {
