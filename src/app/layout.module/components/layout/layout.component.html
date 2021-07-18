@@ -3,9 +3,16 @@
 <h1>layout works!</h1>
 
 <div class="row">
-	<button (click)="localError()">Local front end error</button>
-	<button (click)="failingRequest()">Server request with error</button>
+  <div class="col-3">
+    <button class="btn-primary btn-block" (click)="localError()">Local front end error</button>
+  </div>
+  <div class="col-3">
+    <button class="btn-secondary btn-block" (click)="failingRequest()">Server request with error</button>
+  </div>
 </div>
 
+
+
 <router-outlet></router-outlet>
+
 <app-footer></app-footer>

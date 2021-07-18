@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+export class LayoutComponent implements OnInit {
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     console.log('layout');
@@ -20,8 +20,8 @@ export class LayoutComponent implements OnInit {
     throw Error('The Layout component has thrown an error!');
   }
 
-  public failingRequest() :void{
-    this.http.get('https://httpstat.us/404?sleep=2000').subscribe(resp=>{
+  public failingRequest(): void {
+    this.http.get('https://httpstat.us/404?sleep=2000').subscribe((resp) => {
       console.log(resp);
     });
   }

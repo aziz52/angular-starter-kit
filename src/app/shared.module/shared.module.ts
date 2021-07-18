@@ -17,7 +17,7 @@ import { SharedService } from './services';
   providers: []
 })
 export class SharedModule {
-  public static forRoot(): ModuleWithProviders<any> {
+  public static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: [SharedService]
