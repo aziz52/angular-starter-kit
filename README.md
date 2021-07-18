@@ -12,6 +12,8 @@ I have also used pre-commit git hook to lint the code before getting commited us
 4. Prebuilt support for Husky hooks for commits and push scenarios which prevents bad git commits and push.
 5. Added global error handler service to catch the client side error along with the API errors.
 6. Added Material to the project and used mat-spinner to show loader symbol when making an API call.
+7. Added ng-bootstrap
+8. Added Dark mode and light mode.
 
 ## Development server
 
